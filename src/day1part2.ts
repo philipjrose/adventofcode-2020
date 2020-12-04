@@ -1,5 +1,3 @@
-import { rawListeners } from "process";
-
 const readline = require('readline')
 const fs = require('fs')
 
@@ -74,12 +72,11 @@ const day1part2 = async function (inputFilePath: string): Promise<number | null>
         console.log("Adding this number on its own..")
         // Store the number as its own record
         summedNumbers[currentNumber] = [currentNumber]
-
-        
-
     }
 
     return null
 }
+
+export { day1part2 }
 
 day1part2(getInputFilePathFromArgument()).then((value) => console.log(value))
