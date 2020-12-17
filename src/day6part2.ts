@@ -22,7 +22,8 @@ const getConsistentYesAnswersForGroup = function (rawGroupAnswers: string): stri
         }
     }
 
-    return Object.keys(yesAnswersWithCounts).filter(answer => yesAnswersWithCounts[answer] === rawAnswersByPerson.length)
+    return Object.keys(yesAnswersWithCounts)
+        .filter(answer => yesAnswersWithCounts[answer] === rawAnswersByPerson.length)
 }
 
 const day6part2 = function (inputFilePath: string): number {
